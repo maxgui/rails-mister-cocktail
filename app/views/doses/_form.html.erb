@@ -1,0 +1,13 @@
+<div class="container text-center">
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "form-control" %>
+    <%= f.input :ingredient_id, collection: @ingredients %>
+  </div>
+
+  <%= f.submit "Create Dose", class: "btn btn-primary btn-block" %>
+  <% end  %>
+</div>

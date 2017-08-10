@@ -1,8 +1,17 @@
-<h1>Cocktails index</h1>
-<ul>
+<div class="container">
+<h1 class='text-center'>Cocktails Index</h1>
   <% @cocktails.each do |cocktail| %>
-  <li>
-    <%= cocktail.name %>
+    <div class="card">
+      <div class="card-category">
+        <%= cocktail.name.capitalize %>
+      </div>
+      <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+    </div>
   <% end %>
-  </li>
-</ul>
+</div>
+
+
+<div class="container text-center">
+  <%= link_to 'Add a new cocktail', new_cocktail_path(@cocktail), class: 'btn btn-warning' %>
+</div>
+

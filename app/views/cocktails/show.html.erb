@@ -8,6 +8,9 @@
           <li><%= dose.description %> - <%= dose.ingredient.name %>
           <%= link_to "Delete dose", dose_path(dose), data: {:confirm => 'Are you sure?'}, method: :delete, class: 'btn btn-danger' %>
           <% end %>
+           <% if @cocktail.picture? %>
+        <%= cl_image_tag @cocktail.picture.path, width: 500, height: 300, crop: :fill %>
+        <% end %>
           </li>
         </div>
       </div>
@@ -33,3 +36,5 @@
 <div class="container text-center">
   <%= link_to 'Back to cocktails', cocktails_path, class: 'btn btn-success' %>
 </div>
+
+

@@ -3,9 +3,13 @@
   <% @cocktails.each do |cocktail| %>
     <div class="card">
       <div class="card-category">
-        <%= cocktail.name.capitalize %>
+          <h2><%= cocktail.name.capitalize %></h2>
+        </%>
       </div>
       <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+      <% if cocktail.picture? %>
+        <%= cl_image_tag cocktail.picture.path, width: 400, height: 100, crop: :fill %>
+        <% end %>
     </div>
   <% end %>
 </div>

@@ -8,7 +8,7 @@
       </div>
       <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
       <% if cocktail.picture? %>
-        <%= cl_image_tag cocktail.picture.path, width: 400, height: 100, crop: :fill %>
+        <%= cl_image_tag cocktail.picture.path, width: 1140, height: 175, crop: :fill %>
         <% end %>
     </div>
   <% end %>

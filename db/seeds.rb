@@ -35,6 +35,7 @@ end
 
 cocktails["drinks"].first(10).each do |cocktail|
   Cocktail.create!(picture: cocktail["strDrinkThumb"])
+  cocktail.picture_url = url_co
 end
 
 puts "done"
